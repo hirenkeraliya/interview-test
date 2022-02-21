@@ -8,7 +8,7 @@ use App\Models\Website;
 
 class WebsiteController extends Controller
 {
-    public function getList()
+    public function getList(): array
     {
         $websites = Website::all();
 
@@ -17,7 +17,7 @@ class WebsiteController extends Controller
         ];
     }
 
-    public function store(WebsiteValidation $request)
+    public function store(WebsiteValidation $request): void
     {
         Website::create($request->validated());
     }
