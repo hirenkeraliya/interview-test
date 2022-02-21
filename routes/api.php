@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\WebsiteController;
 use Illuminate\Support\Facades\Route;
 
@@ -16,3 +17,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('websites', [WebsiteController::class, 'getList']);
 Route::post('websites', [WebsiteController::class, 'store']);
+
+Route::get('posts', [PostController::class, 'getList']);
+Route::post('posts', [PostController::class, 'store']);
